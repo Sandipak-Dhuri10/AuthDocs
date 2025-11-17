@@ -1,0 +1,29 @@
+{
+  "short_name": "AuthDoc",
+  "name": "AuthDoc - Legal Document Authentication and Verification System",
+  "description": "A document verification system that detects forgery and authenticates Aadhaar cards using AI and ML-based checks.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0D6EFD",
+  "background_color": "#FFFFFF",
+  "lang": "en",
+  "dir": "ltr"
+}

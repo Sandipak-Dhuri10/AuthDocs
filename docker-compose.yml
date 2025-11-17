@@ -1,0 +1,57 @@
+# ==========================
+# AuthDoc - Full System Compose
+# Backend (Django) | ML-Service (FastAPI) | Frontend (React)
+# ==========================
+
+services:
+  # 🐍 BACKEND (Django + DRF)
+  backend:
+    build:
+      context: ./backend
+    container_name: authdoc-backend
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./backend/media:/app/media
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DJANGO_SETTINGS_MODULE=authdoc.settings
+      - ML_SERVICE_URL=http://ml_service:5000
+    depends_on:
+      - ml_service
+    networks:
+      - authdoc_net
+
+  # 🧠 ML-SERVICE (FastAPI)
+  ml_service:
+    build:
+      context: ./ml_service
+    container_name: authdoc-ml-service
+    command: uvicorn app:app --host 0.0.0.0 --port 5000 --reload
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./ml_service:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - authdoc_net
+
+  # 💻 FRONTEND (React)
+  frontend:
+    build:
+      context: ./frontend
+    container_name: authdoc-frontend
+    ports:
+      - "3000:80"     # Serve app via Nginx on port 3000
+    depends_on:
+      - backend
+    networks:
+      - authdoc_net
+
+# Shared network for all containers
+networks:
+  authdoc_net:
+    driver: bridge

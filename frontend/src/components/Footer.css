@@ -1,0 +1,46 @@
+/* ==========================================================
+   AuthDoc - Footer Styling
+   ----------------------------------------------------------
+   Simple, responsive footer consistent with the AuthDoc theme.
+   ========================================================== */
+
+.footer-authdoc {
+  background-color: var(--color-bg-white);
+  border-top: 1px solid var(--color-border);
+  padding: 1rem 0.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: auto;
+  width: 100%;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-text {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.footer-subtext {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 600px) {
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .footer-subtext {
+    font-size: 0.75rem;
+  }
+}

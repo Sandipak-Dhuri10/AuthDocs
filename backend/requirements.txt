@@ -1,0 +1,33 @@
+# ===============================
+# Core Django + REST Framework
+# ===============================
+django==5.0.6
+djangorestframework==3.15.2
+
+# ===============================
+# Authentication & Security
+# ===============================
+djangorestframework-simplejwt==5.3.1   # For JWT-based authentication
+django-cors-headers==4.3.1             # For frontend-backend communication (CORS)
+
+# ===============================
+# File Handling & Image Processing
+# ===============================
+pillow==10.3.0                         # Image uploads
+python-magic==0.4.27                   # Detect file types for uploads
+
+# ===============================
+# API Requests & Utilities
+# ===============================
+requests==2.32.3                       # For communicating with ML-service
+python-dotenv==1.0.1                   # Optional: for environment variables
+
+# ===============================
+# Development Tools
+# ===============================
+gunicorn==21.2.0                       # For running production server inside Docker
+
+# ===============================
+# Database (SQLite by default, can switch later)
+# ===============================
+psycopg2-binary==2.9.9                 # PostgreSQL client (optional, keep even for SQLite)

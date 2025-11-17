@@ -1,0 +1,68 @@
+/* ==========================================================
+   AuthDoc Global Color Palette
+   ----------------------------------------------------------
+   Defines all theme colors for the AuthDoc application.
+   Use these CSS variables throughout the project for
+   consistent branding and easy future customization.
+   ========================================================== */
+
+/* Root Variables */
+:root {
+  /* ======= Brand Colors ======= */
+  --color-primary: #0d6efd;        /* AuthDoc Blue (Bootstrap blue base) */
+  --color-primary-dark: #084298;   /* Deep blue for hover/focus states */
+  --color-secondary: #6c757d;      /* Neutral gray for secondary text/buttons */
+  --color-accent: #20c997;         /* Teal accent (for success highlights) */
+  --color-danger: #dc3545;         /* Red for errors or warnings */
+
+  /* ======= Backgrounds ======= */
+  --color-bg-light: #f8f9fa;       /* Light gray background (page default) */
+  --color-bg-white: #ffffff;       /* Pure white (cards, modals, navbar) */
+  --color-bg-dark: #212529;        /* Deep gray for dark mode (future use) */
+
+  /* ======= Text Colors ======= */
+  --color-text-dark: #212529;      /* Main body text color */
+  --color-text-light: #f8f9fa;     /* Inverse (on dark backgrounds) */
+  --color-text-muted: #6c757d;     /* Muted secondary text */
+  --color-text-primary: var(--color-primary); /* Brand highlight text */
+
+  /* ======= Borders & Shadows ======= */
+  --color-border: rgba(0, 0, 0, 0.1);     /* Subtle divider borders */
+  --color-shadow: rgba(0, 0, 0, 0.08);    /* Soft shadow for hover states */
+
+  /* ======= Feedback States ======= */
+  --color-success: #198754;   /* Green for verified results */
+  --color-warning: #ffc107;   /* Yellow for pending checks */
+  --color-error: #dc3545;     /* Red for forged/invalid docs */
+}
+
+/* ==========================================================
+   Utility Classes (Optional)
+   ----------------------------------------------------------
+   Use these directly in JSX or CSS modules for quick styling.
+   ========================================================== */
+
+.bg-primary-authdoc {
+  background-color: var(--color-primary) !important;
+  color: var(--color-text-light) !important;
+}
+
+.bg-light-authdoc {
+  background-color: var(--color-bg-light) !important;
+}
+
+.text-primary-authdoc {
+  color: var(--color-primary) !important;
+}
+
+.text-muted-authdoc {
+  color: var(--color-text-muted) !important;
+}
+
+.border-authdoc {
+  border: 1px solid var(--color-border) !important;
+}
+
+.shadow-authdoc {
+  box-shadow: 0 4px 10px var(--color-shadow) !important;
+}
