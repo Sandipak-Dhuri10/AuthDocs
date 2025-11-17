@@ -1,0 +1,97 @@
+##################################
+# OS / Editor / System Files
+##################################
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# VS Code
+.vscode/
+.history/
+
+##################################
+# Python / Django
+##################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Django SQLite Database
+db.sqlite3
+*.sqlite3
+
+# Django media/uploads
+media/
+backend/media/
+
+##################################
+# React Frontend
+##################################
+node_modules/
+build/
+dist/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React environment files
+frontend/.env
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+frontend/.env.test
+
+##################################
+# Backend environment
+##################################
+backend/.env
+backend/.env.local
+backend/.env.dev
+backend/.env.prod
+
+##################################
+# ML Service
+##################################
+ml_service/__pycache__/
+ml_service/models/
+ml_service/temp/
+ml_service/uploads/
+
+##################################
+# Docker
+##################################
+# Ignore local docker build cache
+**/Dockerfile~
+**/docker-compose.override.yml
+
+##################################
+# Git
+##################################
+*.orig
+*.rej
+
+##################################
+# Byte-compiled / temporary files
+##################################
+*.bak
+*.swp
+*.swo
+.cache/
+.pip-cache/
+__pycache__/
+
